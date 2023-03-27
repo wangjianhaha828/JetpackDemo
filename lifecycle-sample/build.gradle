@@ -7,6 +7,9 @@ android {
     namespace 'com.example.lifecycle_sample'
     compileSdk 33
 
+    viewBinding{
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.example.lifecycle_sample"
         minSdk 24
