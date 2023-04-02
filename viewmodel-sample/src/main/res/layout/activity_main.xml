@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_lifecycle"
+        android:id="@+id/btn_view_model"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Lifecycle"
+        android:text="ViewModel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
