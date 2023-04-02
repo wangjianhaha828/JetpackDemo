@@ -26,7 +26,8 @@ class SecondFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private val viewModel:RotationScreenViewModel by activityViewModels()
+//    private val viewModel:RotationScreenViewModel by activityViewModels()
+    private val viewModel: RotationScreenViewModel by activityViewModels { RotationScreenViewModel.Factory1 }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

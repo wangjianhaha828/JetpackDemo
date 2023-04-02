@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class FirstFragment : Fragment() {
     private lateinit var _binding: FragmentFirstBinding
-    private val viewModel:RotationScreenViewModel by activityViewModels()
+    private val viewModel: RotationScreenViewModel by activityViewModels { RotationScreenViewModel.Factory1 }
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -47,10 +47,10 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding.btnAdd.setOnClickListener{
+        _binding.btnAdd.setOnClickListener {
             viewModel.addData()
         }
-        viewModel.numLiveData.observe(requireActivity()){
+        viewModel.numLiveData.observe(requireActivity()) {
             _binding.tvNumber.text = it.num.toString()
         }
     }
