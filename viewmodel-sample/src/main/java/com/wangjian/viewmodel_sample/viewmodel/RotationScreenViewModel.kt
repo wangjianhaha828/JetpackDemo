@@ -9,7 +9,6 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 
 class RotationScreenViewModel(
     private val myStore: MyStore,
-    private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
 //    private val myStore: MyStore = MyStore(0)
@@ -34,7 +33,6 @@ class RotationScreenViewModel(
                 val savedStateHandle = extras.createSavedStateHandle()
                 return RotationScreenViewModel(
                     MyStore(0),
-                    savedStateHandle
                 ) as T
             }
         }
@@ -44,7 +42,6 @@ class RotationScreenViewModel(
                 val savedStateHandle = createSavedStateHandle()
                 RotationScreenViewModel(
                     MyStore(0),
-                    savedStateHandle = savedStateHandle
                 )
             }
         }
